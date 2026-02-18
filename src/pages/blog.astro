@@ -1,0 +1,87 @@
+---
+import Navigation from "../components/navigation.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Blog | My Astro Site</title>
+  </head>
+
+  <body>
+    <Navigation currentPage="/blog" />
+
+    <main class="container">
+      <h1>Blog</h1>
+
+      <p>
+        Welcome to my blog. I'll write about web development, performance,
+        tools, and random thoughts.
+      </p>
+
+      <div class="post-list">
+        <article class="post-teaser">
+          <h2><a href="/blog/hello-world">Hello World — First Post</a></h2>
+          <time datetime="2025-02-01">February 1, 2025</time>
+          <p>
+            Starting this blog with Astro. Why I chose it and what to expect.
+          </p>
+        </article>
+
+        <!-- Add more articles here later -->
+        <article class="post-teaser">
+          <h2><a href="#">Coming soon...</a></h2>
+          <time>—</time>
+          <p>More posts coming when inspiration strikes ✦</p>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>
+
+<style>
+  .container {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+  }
+
+  .post-list {
+    margin-top: 2.5rem;
+  }
+
+  .post-teaser {
+    padding: 1.8rem 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .post-teaser:last-child {
+    border-bottom: none;
+  }
+
+  h2 {
+    margin: 0 0 0.6rem;
+    font-size: 1.6rem;
+  }
+
+  h2 a {
+    color: #0f172a;
+    text-decoration: none;
+  }
+
+  h2 a:hover {
+    color: #2563eb;
+    text-decoration: underline;
+  }
+
+  time {
+    color: #64748b;
+    font-size: 0.95rem;
+  }
+
+  p {
+    margin-top: 0.8rem;
+    color: #475569;
+  }
+</style>

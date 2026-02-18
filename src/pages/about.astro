@@ -1,0 +1,69 @@
+---
+import Navigation from "../components/navigation.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>About | My Astro Site</title>
+  </head>
+
+  <body>
+    <Navigation currentPage="/about" />
+
+    <main class="container">
+      <h1>About Me</h1>
+
+      <p>
+        Hi! I'm Jerwin — a web developer from the Philippines who loves building
+        fast, beautiful, and maintainable websites.
+      </p>
+
+      <p>
+        I enjoy working with <strong>Astro</strong>, Tailwind CSS, TypeScript,
+        React/Preact, and anything that makes the web feel snappy.
+      </p>
+
+      <h2>What I'm currently into</h2>
+      <ul>
+        <li>Static-first & island architecture</li>
+        <li>Performance & Core Web Vitals</li>
+        <li>Learning Rust & experimenting with Tauri</li>
+        <li>Minimalism in design & code</li>
+      </ul>
+
+      <p>
+        Feel free to say hi on <a href="https://x.com/yourusername">X</a> or
+        <a href="https://github.com/yourusername">GitHub</a>.
+      </p>
+    </main>
+  </body>
+</html>
+
+<style>
+  .container {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+    line-height: 1.7;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    margin-top: 3rem;
+    color: #0f172a;
+  }
+
+  ul {
+    padding-left: 1.4rem;
+    margin: 1.5rem 0;
+  }
+
+  li {
+    margin-bottom: 0.8rem;
+  }
+</style>
