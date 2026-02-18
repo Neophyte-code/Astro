@@ -1,5 +1,7 @@
 ---
 import Navigation from "../components/navigation.astro";
+import "../styles/global.css";
+
 const pageTitle = "About Me";
 
 const identity = {
@@ -14,10 +16,6 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 const happy = true;
 const finished = false;
 const goal = 3;
-
-const skillColor = "crimson";
-const fontWeight = "bold";
-const textCase = "uppercase";
 ---
 
 <html lang="en">
@@ -25,18 +23,6 @@ const textCase = "uppercase";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
-
-    <style define:vars={{ skillColor, fontWeight, textCase }}>
-      h1 {
-        color: purple;
-        font-size: 4rem;
-      }
-      .skill {
-        color: var(--skillColor);
-        font-weight: var(--fontWeight);
-        text-transform: var(--textCase);
-      }
-    </style>
   </head>
 
   <body>
@@ -46,8 +32,8 @@ const textCase = "uppercase";
       <h1>{pageTitle}</h1>
 
       <p>
-        Hi! I'm Jerwin — a web developer from the Philippines who loves building
-        fast, beautiful, and maintainable websites.
+        Hi! I'm Neophyte — a web developer from the Philippines who loves
+        building fast, beautiful, and maintainable websites.
       </p>
 
       <p>
@@ -98,30 +84,3 @@ const textCase = "uppercase";
     </main>
   </body>
 </html>
-
-<style>
-  .container {
-    max-width: 900px;
-    margin: 4rem auto;
-    padding: 0 1.5rem;
-    line-height: 1.7;
-  }
-
-  h1 {
-    margin-bottom: 2rem;
-  }
-
-  h2 {
-    margin-top: 3rem;
-    color: #0f172a;
-  }
-
-  ul {
-    padding-left: 1.4rem;
-    margin: 1.5rem 0;
-  }
-
-  li {
-    margin-bottom: 0.8rem;
-  }
-</style>
