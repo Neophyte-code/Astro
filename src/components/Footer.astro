@@ -1,0 +1,126 @@
+---
+const year = new Date().getFullYear();
+
+const socials = [
+  { name: "GitHub", url: "https://github.com/jerwin", icon: "github" },
+  { name: "X / Twitter", url: "https://x.com/yourusername", icon: "x" },
+];
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="top">
+      <p class="credit">
+        © {year} Jerwin. Made with <a
+          href="https://astro.build/"
+          target="_blank"
+          rel="noopener">Astro</a
+        >.
+      </p>
+
+      <ul class="social-links">
+        {
+          socials.map((social) => (
+            <li>
+              <a
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Jerwin on ${social.name}`}
+              >
+                {social.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <p class="subtle">
+      Built in Mandaue City, Philippines • <a href="/about">About this site</a>
+    </p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: #0f172a;
+    color: #cbd5e1;
+    padding: 3rem 0 2rem;
+    margin-top: 4rem;
+    border-top: 1px solid #334155;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+  }
+
+  .top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem 4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .credit {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .credit a {
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .credit a:hover {
+    text-decoration: underline;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .social-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+  }
+
+  .social-links a:hover {
+    color: white;
+  }
+
+  .subtle {
+    margin: 1rem 0 0;
+    font-size: 0.85rem;
+    color: #64748b;
+  }
+
+  .subtle a {
+    color: #94a3b8;
+    text-decoration: none;
+  }
+
+  .subtle a:hover {
+    color: #cbd5e1;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 640px) {
+    .top {
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+  }
+</style>

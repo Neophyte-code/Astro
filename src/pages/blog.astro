@@ -1,5 +1,6 @@
 ---
-import Navigation from "../components/navigation.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 const pageTitle = "My Blog";
 ---
@@ -12,7 +13,7 @@ const pageTitle = "My Blog";
   </head>
 
   <body>
-    <Navigation currentPage="/blog" />
+    <Header />
 
     <main class="container">
       <h1>{pageTitle}</h1>
@@ -46,7 +47,12 @@ const pageTitle = "My Blog";
         </article>
       </div>
     </main>
+    <Footer />
   </body>
+
+  <script>
+    import "../scripts/Menu.js";
+  </script>
 </html>
 
 <style>

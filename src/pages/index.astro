@@ -1,5 +1,7 @@
 ---
-import Navigation from "../components/navigation.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
 import "../styles/global.css";
 const pageTitle = "Home page";
 ---
@@ -12,86 +14,13 @@ const pageTitle = "Home page";
   </head>
 
   <body>
-    <Navigation currentPage="/" />
+    <Header />
 
-    <main class="container">
-      <section class="hero">
-        <h1>Welcome to My Astro Site</h1>
-        <p>
-          A fast, content-focused website built with <strong>Astro</strong>.
-          Modern, minimal, and lightning quick.
-        </p>
-
-        <div class="buttons">
-          <a href="/about" class="btn primary">About Me</a>
-          <a href="/blog" class="btn">Read Blog</a>
-        </div>
-      </section>
-
-      <section>
-        <h2>Latest Thoughts</h2>
-        <p>Some featured blog posts could appear here later...</p>
-      </section>
-    </main>
+    <h1>{pageTitle}</h1>
+    <Footer />
   </body>
+
+  <script>
+    import "../scripts/Menu.js";
+  </script>
 </html>
-
-<style>
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
-
-  .hero {
-    text-align: center;
-    padding: 5rem 1rem 7rem;
-  }
-
-  h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    color: #0f172a;
-  }
-
-  p {
-    font-size: 1.3rem;
-    max-width: 600px;
-    margin: 0 auto 2.5rem;
-    color: #475569;
-  }
-
-  .buttons {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .btn {
-    padding: 0.9rem 1.8rem;
-    border-radius: 6px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.2s;
-  }
-
-  .btn.primary {
-    background: #2563eb;
-    color: white;
-  }
-
-  .btn.primary:hover {
-    background: #1d4ed8;
-    transform: translateY(-2px);
-  }
-
-  .btn {
-    background: #e2e8f0;
-    color: #1e293b;
-  }
-
-  .btn:hover {
-    background: #cbd5e1;
-  }
-</style>
